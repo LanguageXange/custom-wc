@@ -74,7 +74,7 @@ function displayResults(option) {
     printResult(fileSize, "byte", colorMap.blue);
     printResult(lines, "line", colorMap.green);
     printResult(words, "word", colorMap.yellow);
-    printResult(chars, "chars", colorMap.purple);
+    printResult(chars, "character", colorMap.purple);
     return;
   }
   switch (option) {
