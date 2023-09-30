@@ -1,5 +1,5 @@
 {
-  "name": "mywc",
+  "name": "wctool",
   "version": "1.0.0",
   "description": "custom wc tool",
   "main": "bin/index.js",
