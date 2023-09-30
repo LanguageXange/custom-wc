@@ -1,0 +1,25 @@
+{
+  "name": "wctool",
+  "version": "1.0.0",
+  "description": "custom wc tool",
+  "main": "bin/index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LanguageXange/custom-wc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "coolwc": "./bin/index.js"
+  },
+  "keywords": [
+    "CLI"
+  ],
+  "author": "Cindy",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
