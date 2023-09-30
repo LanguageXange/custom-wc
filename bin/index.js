@@ -88,7 +88,7 @@ function displayResults(option) {
       printResult(words, "word", colorMap.yellow);
       break;
     case "-m":
-      printResult(chars, "chars", colorMap.purple);
+      printResult(chars, "character", colorMap.purple);
       break;
     default:
       throw new Error("option is not valid");
