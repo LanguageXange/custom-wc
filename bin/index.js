@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import fs from "fs";
-import chalk from "chalk";
 import {
   countLines,
   countWords,
@@ -14,6 +13,8 @@ const colorMap = {
   blue: "#9cdff7",
   purple: "#b54fe8",
   yellow: "#ffe91f",
+  red: "#ff0000",
+  pink: "#f51767",
 };
 
 const welcomeText = `Welcome! type coolwc -h to find all commands. \n`;
@@ -31,7 +32,7 @@ cat filename | coolwc -w
 cat filename | coolwc -m
 -----------------------------
 `;
-printText(welcomeText, "#f51767");
+printText(welcomeText, colorMap.pink);
 
 const args = process.argv.slice(2);
 
@@ -115,7 +116,7 @@ async function coolwc() {
 
     displayResults(option);
   } catch (err) {
-    console.log(chalk.red(`Ooops! ${err.message}`));
+    printText(`Ooops error! ${err.message}`, colorMap.red);
   }
 }
 
