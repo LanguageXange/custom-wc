@@ -1,7 +1,5 @@
 import chalk from "chalk";
 
-//
-
 function printText(text, hexcolor = "#08adff") {
   console.log(chalk.hex(hexcolor).bold(text));
 }
@@ -11,7 +9,7 @@ function printResult(number, unit, hexColor = "#08adff") {
   console.log(chalk.hex(hexColor).bold(result));
 }
 
-// count new lines so we need to subtract 1
+// wc -l print the "newline" counts so we need to subtract the result by 1
 function countLines(contents) {
   return contents ? contents.split("\n").length - 1 : 0;
 }
@@ -23,7 +21,5 @@ function countWords(contents) {
 function countChar(contents) {
   return contents.length;
 }
-
-// exporting all the util functions;
 
 export { countLines, printText, countWords, countChar, printResult };

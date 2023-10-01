@@ -35,10 +35,6 @@ printText(welcomeText, "#f51767");
 
 const args = process.argv.slice(2);
 
-// coolwc --help filename
-// coolwc filename
-// if no option provided - return all ( -c, -l -w)
-// if no filename provided - allow standard input; e.g. cat test.txt | coolwc
 let option = null;
 let filename = null;
 
@@ -48,7 +44,7 @@ let words = 0;
 let chars = 0;
 let contents = null;
 
-// TODO - handle more use cases; refactor the code
+// TO DO - handle more use cases, better error handling and refactor the code
 function handleArgs(args) {
   if (!args.length) {
     throw new Error("Invalid input");
@@ -69,7 +65,7 @@ function handleArgs(args) {
 }
 
 function displayResults(option) {
-  // if no option provided; print all and return;
+  // if no option provided; print all results and return;
   if (!option) {
     printResult(fileSize, "byte", colorMap.blue);
     printResult(lines, "line", colorMap.green);
@@ -112,7 +108,7 @@ async function coolwc() {
       fileSize = buffer.length;
       contents = buffer.toString();
     }
-    // helper function to help us calculate lines, words, character
+    // calculate lines, words, characters
     lines = countLines(contents);
     words = countWords(contents);
     chars = countChar(contents);
